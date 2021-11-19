@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 import { MaterialModule } from './material.module';
-
+import { HttpClientModule } from '@angular/common/http';
 //import { ListadoComponent } from './components/listado/listado.component';
+import { SignUpService } from './pages/services/sign-up.service';
+import { HomeService } from './pages/services/home.service';
 @NgModule({
   
   declarations: [
@@ -17,9 +19,10 @@ import { MaterialModule } from './material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     PagesModule,
+    HttpClientModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [SignUpService, HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
