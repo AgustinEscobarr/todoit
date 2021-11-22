@@ -1,4 +1,5 @@
 import { Rol } from './rol';
+
 export interface Usuario {
 id?:number;
 email:string;

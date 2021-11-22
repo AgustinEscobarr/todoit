@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import { ListadoComponent } from './components/listado/listado.component';
 import { SignUpService } from './pages/services/sign-up.service';
 import { HomeService } from './pages/services/home.service';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   
   declarations: [
@@ -20,7 +21,8 @@ import { HomeService } from './pages/services/home.service';
     BrowserAnimationsModule,
     PagesModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [SignUpService, HomeService],
   bootstrap: [AppComponent]
