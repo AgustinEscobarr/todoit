@@ -8,7 +8,6 @@ address:string;
 cellphone:string;
 isAccepted?:boolean;
 isDeleted?:boolean;
-observations:string;
 password:string;
 vehicle?:string;
 rol?:Rol;

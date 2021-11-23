@@ -471,12 +471,44 @@
       "id": 27
     },
     {
-      "email": "pepito@mail.com",
-      "password": "pkasnfddoasgbd",
-      "fullName": "Pepito asdnoa",
-      "address": "kaka 123",
-      "cellPhone": "+54119749213",
+      "email": "agustin.escobar55@outlook.es",
+      "fullname": "Agustín  Escobar",
+      "address": "Sancti Spiritu 4137",
+      "cellphone": "1122515665",
+      "password": "123456789",
       "id": 28
+    },
+    {
+      "email": "asfasdf@asfd.com",
+      "fullname": "gasasdf aasdfasdfas",
+      "address": "asdfasdfasdfsad",
+      "cellphone": "1254658972",
+      "password": "123546854",
+      "id": 29
+    },
+    {
+      "email": "agustinescobaring@gmail.com",
+      "fullname": "Agustin Escobar",
+      "address": "sarasa sarasa sa",
+      "cellphone": "1234567899",
+      "password": "123456789",
+      "id": 30
+    },
+    {
+      "email": "asdasdasdsadas@asdasda.com",
+      "fullname": "asdasdsadas asdasdasdasd",
+      "address": "asdasdasdasdasdas",
+      "cellphone": "1234567899",
+      "password": "asdasdasdasdasdasd",
+      "id": 31
+    },
+    {
+      "email": "charango@char.com",
+      "fullname": "prueba superform",
+      "address": "re lejos 123",
+      "cellphone": "1234567899",
+      "password": "okoompasmppn",
+      "id": 32
     }
   ],
   "Roles": [

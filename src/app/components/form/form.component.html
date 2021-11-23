@@ -71,19 +71,45 @@
             name="email"
             [formControl]="emailFormControl"
             [errorStateMatcher]="matcher"
+            [(ngModel)]="usuario1.email"
             placeholder="Ej. hola@ejemplo.com"
+            
           />
           <mat-hint>Errors appear instantly!</mat-hint>
-          <mat-error
-            *ngIf="
-              emailFormControl.hasError('email') &&
-              !emailFormControl.hasError('required')
-            "
-          >
+          <mat-error *ngIf="emailFormControl.hasError('email') &&!emailFormControl.hasError('required')">
             Por favor ingrese un Email válido
           </mat-error>
           <mat-error *ngIf="emailFormControl.hasError('required')">
             El Email es <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-order">
+        <mat-form-field appearance="fill" class="input-form"><!--Formulario de direccion-->
+          <mat-label>Dirección (domicilio)</mat-label>
+          <input
+            matInput
+            placeholder="Escribe tu dirección (domicilio)"
+            type="text"
+            id="address"
+            name="address"
+            class="form-control input-form"
+            required
+            minlength="4"
+            [(ngModel)]="usuario1.address"
+            #address="ngModel"
+          />
+
+          <mat-error
+            *ngIf="address.invalid && (address.dirty || address.touched)"
+            class="alert"
+          >
+            <div *ngIf="address.errors?.['required']">
+              El domicilio es requerido.
+            </div>
+            <div *ngIf="address.errors?.['minlength']">
+              El apellido debe tener como mínimo 2 caracteres.
+            </div>
           </mat-error>
         </mat-form-field>
       </div>
@@ -153,7 +179,9 @@
       </div>
     </div>
     <div class="buttons-form">
-      <button mat-button>Enviar</button>
+      <div *ngIf="name.valid && lastname.valid && emailFormControl.valid && tel.valid && password.valid && address.valid">
+        <button mat-button (click)="signUp();">Enviar</button>
+      </div>
       <button mat-button>Ya tengo cuenta</button>
     </div>
   </div>

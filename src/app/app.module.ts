@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignUpService } from './pages/services/sign-up.service';
 import { HomeService } from './pages/services/home.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DialogRegisterComponent } from './components/popUp/dialog-register/dialog-register.component';
 @NgModule({
   
   declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [SignUpService, HomeService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DialogRegisterComponent]
 })
 export class AppModule { }

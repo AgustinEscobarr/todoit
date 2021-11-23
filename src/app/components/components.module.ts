@@ -4,6 +4,7 @@ import { HeaderLandingComponent } from './header-landing/header-landing.componen
 import { FormComponent } from './form/form.component';
 import { MaterialModule } from '../material.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { DialogRegisterComponent } from './popUp/dialog-register/dialog-register.component';
 
 
 
@@ -12,7 +13,7 @@ import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   
-  declarations: [HeaderLandingComponent, FormComponent
+  declarations: [HeaderLandingComponent, FormComponent, DialogRegisterComponent
   ],
   imports: [
     CommonModule,MaterialModule,AppRoutingModule
