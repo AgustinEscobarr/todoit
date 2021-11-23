@@ -1,10 +1,16 @@
 <nav>
     <mat-toolbar>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <mat-icon>menu</mat-icon>
+        <button  class="example-icon" aria-label="Example icon-button with menu icon">
+          <img style="margin: auto;" src="../assets/logo.svg"/>
         </button>
-        <span>TODO IT</span>
+        <span style="margin: auto;">TODO IT</span>
         <span class="example-spacer"></span>
+        <button mat-icon-button class=" buttonBar" aria-label="Example icon-button with share icon">
+          Inicio
+        </button>
+        <button mat-icon-button class="buttonBar" aria-label="Example icon-button with share icon">
+          Nosotros
+        </button>
         <button class="button-signup" mat-button [routerLink]="['/register']" routerLinkActive="router-link-active"> Registrarse</button>
         
       </mat-toolbar>

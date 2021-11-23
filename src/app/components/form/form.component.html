@@ -2,6 +2,7 @@
   <div class="void-space"></div>
   <div class="container-form">
     <h1>Registro</h1>
+    <h4>El boton de registrarse aparecera cuando complete correctamente el formulario</h4>
     <div class="form-register">
       <div class="form-order">
         <mat-form-field appearance="fill" class="input-form"> <!--Formulario del nombre-->
@@ -179,10 +180,12 @@
       </div>
     </div>
     <div class="buttons-form">
+      <button mat-button>Ya tengo cuenta</button>
       <div *ngIf="name.valid && lastname.valid && emailFormControl.valid && tel.valid && password.valid && address.valid">
         <button mat-button (click)="signUp();">Enviar</button>
       </div>
-      <button mat-button>Ya tengo cuenta</button>
+      
+      
     </div>
   </div>
 </div>
