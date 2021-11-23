@@ -1,9 +1,27 @@
 @use './sass/_buttonRegister.scss' ;
 @use './sass/_buttonGeneral.scss';
+@use './sass/buttonResponsive.scss';
 .example-spacer {
   flex: 1 1 auto;
 }
 .nav{
   z-index: 100;
 }
-    
+.menu-responsive{
+  display: none;
+}
+@media screen and (max-width:800px) {
+  .button-signup{
+    display: none;
+  }
+  .buttonBar{
+    display: none;
+  }
+  .menu-responsive{
+    display: block;
+  }
+  .nombre-logo{
+    margin-left: 100px ;
+  }
+
+}

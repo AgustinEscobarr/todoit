@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ListadoComponent } from '../components/listado/listado.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 import {ComponentsModule} from '../components/components.module';
 
@@ -16,7 +17,8 @@ import {ComponentsModule} from '../components/components.module';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    AppRoutingModule
   ],
   exports:[
     HomeComponent,

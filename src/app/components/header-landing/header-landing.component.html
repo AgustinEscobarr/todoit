@@ -1,23 +1,47 @@
 <nav class="nav">
-    <mat-toolbar>
-        <div  class="example-icon" aria-label="Example icon-button with menu icon">
-          <img style="margin: auto;" src="../assets/logo.svg"/>
-        </div>
-        <span style="margin: auto;">TODO IT</span>
-        <span class="example-spacer"></span>
-        <button  mat-button class=" buttonBar" aria-label="icon-button " [routerLink]="['/home']" routerLinkActive="router-link-active">
+  <mat-toolbar>
+    <div class="logo" aria-label="Example icon-button with menu icon">
+      <img style="margin: auto" src="../assets/logo.svg" />
+    </div>
+    <span class="nombre-logo" style="margin: auto">TODO IT</span>
+    <span class="example-spacer"></span>
+    <div class="menu-responsive">
+      <button mat-icon-button mat-button [matMenuTriggerFor]="menu" class="icon" aria-label="icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="buttonMenuResponsive" aria-label="icon-button " [routerLink]="['/home']" routerLinkActive="router-link-active">
           Inicio
         </button>
-        <button  mat-button class="buttonBar" aria-label="icon-button">
+        <button mat-menu-item class="buttonMenuResponsive" aria-label="icon-button">
           ¿Quienes somos?
         </button>
-        <button  mat-button class="buttonBar" aria-label="icon-button">
+        <button mat-menu-item class="buttonMenuResponsive" aria-label="icon-button">
           Productos
         </button>
-        <button  mat-button class="buttonBar" aria-label="icon-button">
+        
+        <button mat-menu-item class="buttonMenuResponsive" aria-label="icon-button">
           Servicios
         </button>
-        <button class="button-signup" mat-button [routerLink]="['/register']" routerLinkActive="router-link-active"> Registrarse</button>
-        
-      </mat-toolbar>
+        <button class="buttonMenuResponsive" mat-menu-item [routerLink]="['/register']" routerLinkActive="router-link-active">
+          Registrarse
+        </button>
+      </mat-menu>
+    </div>
+    <button mat-button class="buttonBar" aria-label="icon-button " [routerLink]="['/home']" routerLinkActive="router-link-active">
+      Inicio
+    </button>
+    <button mat-button class="buttonBar" aria-label="icon-button">
+      ¿Quienes somos?
+    </button>
+    <button mat-button class="buttonBar" aria-label="icon-button">
+      Productos
+    </button>
+    <button mat-button class="buttonBar" aria-label="icon-button">
+      Servicios
+    </button>
+    <button class="button-signup" mat-button [routerLink]="['/register']" routerLinkActive="router-link-active">
+      Registrarse
+    </button>
+  </mat-toolbar>
 </nav>

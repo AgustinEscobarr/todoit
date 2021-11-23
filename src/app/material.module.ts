@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -21,7 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
    
     
   ],
@@ -33,7 +35,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
    
   ]
 })
