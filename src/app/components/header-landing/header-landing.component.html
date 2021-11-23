@@ -1,15 +1,21 @@
-<nav>
+<nav class="nav">
     <mat-toolbar>
         <div  class="example-icon" aria-label="Example icon-button with menu icon">
           <img style="margin: auto;" src="../assets/logo.svg"/>
         </div>
         <span style="margin: auto;">TODO IT</span>
         <span class="example-spacer"></span>
-        <button  mat-button class=" buttonBar" aria-label="icon-button ">
+        <button  mat-button class=" buttonBar" aria-label="icon-button " [routerLink]="['/home']" routerLinkActive="router-link-active">
           Inicio
         </button>
         <button  mat-button class="buttonBar" aria-label="icon-button">
-          Nosotros
+          ¿Quienes somos?
+        </button>
+        <button  mat-button class="buttonBar" aria-label="icon-button">
+          Productos
+        </button>
+        <button  mat-button class="buttonBar" aria-label="icon-button">
+          Servicios
         </button>
         <button class="button-signup" mat-button [routerLink]="['/register']" routerLinkActive="router-link-active"> Registrarse</button>
         
