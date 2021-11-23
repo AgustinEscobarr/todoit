@@ -4,7 +4,7 @@
     <h1>Registro</h1>
     <div class="form-register">
       <div class="form-order">
-        <mat-form-field appearance="fill" class="input-form">
+        <mat-form-field appearance="fill" class="input-form"> <!--Formulario del nombre-->
           <mat-label>Nombre</mat-label>
           <input
             matInput
@@ -28,14 +28,12 @@
             <div *ngIf="name.errors?.['minlength']">
               El nombre debe tener como mínimo 3 caracteres.
             </div>
-            <div *ngIf="name.errors?.['forbiddenName']">
-              Name cannot be Bob.
-            </div>
           </mat-error>
         </mat-form-field>
       </div>
       <div class="form-order">
-        <mat-form-field appearance="fill" class="input-form">
+        <mat-form-field appearance="fill" class="input-form"><!--Formulario de apellido-->
+          <mat-label>Apellido</mat-label>
           <input
             matInput
             placeholder="Escribe tu apellido"
@@ -44,35 +42,36 @@
             name="lastname"
             class="form-control input-form"
             required
-            minlength="3"
+            minlength="2"
             [(ngModel)]="fullname1.lastname"
-            #name="ngModel"
+            #lastname="ngModel"
           />
 
           <mat-error
-            *ngIf="name.invalid && (name.dirty || name.touched)"
+            *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
             class="alert"
           >
-            <div *ngIf="name.errors?.['required']">El nombre es requerido.</div>
-            <div *ngIf="name.errors?.['minlength']">
-              El nombre debe tener como mínimo 3 caracteres.
+            <div *ngIf="lastname.errors?.['required']">
+              El apellido es requerido.
             </div>
-            <div *ngIf="name.errors?.['forbiddenName']">
-              Name cannot be Bob.
+            <div *ngIf="lastname.errors?.['minlength']">
+              El apellido debe tener como mínimo 2 caracteres.
             </div>
           </mat-error>
         </mat-form-field>
       </div>
 
       <div class="form-order">
-        <mat-form-field class="example-full-width input-form" appearance="fill">
+        <mat-form-field class="example-full-width input-form" appearance="fill"><!--formulario de email usando formControl-->
           <mat-label>Email</mat-label>
           <input
             type="email"
             matInput
+            id="email"
+            name="email"
             [formControl]="emailFormControl"
             [errorStateMatcher]="matcher"
-            placeholder="Ex. pat@example.com"
+            placeholder="Ej. hola@ejemplo.com"
           />
           <mat-hint>Errors appear instantly!</mat-hint>
           <mat-error
@@ -81,17 +80,28 @@
               !emailFormControl.hasError('required')
             "
           >
-            Please enter a valid email address
+            Por favor ingrese un Email válido
           </mat-error>
           <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
+            El Email es <strong>requerido</strong>
           </mat-error>
         </mat-form-field>
       </div>
       <div class="form-order">
-        <mat-form-field appearance="fill" class="input-form">
-          <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'" />
+        <mat-form-field appearance="fill" class="input-form"> <!--Formulario de la contraseña-->
+          <mat-label>Ingrese una contraseña</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Escribe una contraseña"
+            id="password"
+            name="password"
+            class="form-control input-form"
+            required
+            minlength="7"
+            [(ngModel)]="usuario1.password"
+            #password="ngModel"
+          />
           <button
             mat-icon-button
             matSuffix
@@ -101,14 +111,44 @@
           >
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
           </button>
+          <mat-error
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert"
+          >
+            <div *ngIf="password.errors?.['required']">
+              Es necesario una contraseña.
+            </div>
+            <div *ngIf="password.errors?.['minlength']">
+              La contraseña debe tener como mínimo 7 caracteres.
+            </div>
+          </mat-error>
         </mat-form-field>
       </div>
       <div class="form-order">
-        <mat-form-field class="example-full-width input-form" appearance="fill">
-          <mat-label>Telephone</mat-label>
+        <mat-form-field class="input-form" appearance="fill"> <!--Formulario del telefono-->
+          <mat-label>Telefono móvil</mat-label>
           <span matPrefix>+549 &nbsp;</span>
-          <input type="tel" matInput placeholder="15-1234-5678" />
+          <input type="tel"
+          id="tel"
+          name="tel"
+          class="form-control input-form"
+          required
+          minlength="10"
+          [(ngModel)]="usuario1.cellphone"
+          #tel="ngModel"
+          matInput placeholder="15-1234-5678" />
           <mat-icon matSuffix>mode_edit</mat-icon>
+          <mat-error
+            *ngIf="tel.invalid && (tel.dirty || tel.touched)"
+            class="alert"
+          >
+            <div *ngIf="tel.errors?.['required']">
+              El teléfono es requerido.
+            </div>
+            <div *ngIf="tel.errors?.['minlength']">
+              El teléfono debe tener como mínimo 10 numeros.
+            </div>
+          </mat-error>
         </mat-form-field>
       </div>
     </div>
