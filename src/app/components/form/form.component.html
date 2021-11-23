@@ -181,7 +181,7 @@
     </div>
     <div class="buttons-form">
       <button mat-button>Ya tengo cuenta</button>
-      <div *ngIf="name.valid && lastname.valid && emailFormControl.valid && tel.valid && password.valid && address.valid">
+      <div class="button-enviar" *ngIf="name.valid && lastname.valid && emailFormControl.valid && tel.valid && password.valid && address.valid">
         <button mat-button (click)="signUp();">Enviar</button>
       </div>
       
