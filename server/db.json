@@ -477,6 +477,38 @@
       "cellphone": "1234567899",
       "password": "fsdf asfgasdgasdg",
       "id": 28
+    },
+    {
+      "email": "charango@char.com",
+      "fullname": "prueba superform",
+      "address": "re lejos 123",
+      "cellphone": "1234567899",
+      "password": "asdadasdasdasd",
+      "id": 29
+    },
+    {
+      "email": "asdasda@asd.com",
+      "fullname": "prueba superform",
+      "address": "hajudhioasudhasodu",
+      "cellphone": "1234567899",
+      "password": "asdasdasdasd",
+      "id": 30
+    },
+    {
+      "email": "asdasdasd@asdads.com",
+      "fullname": "aasdasdasd asdasdasdasd",
+      "address": "asdasdasd",
+      "cellphone": "1234567899",
+      "password": "sadasdasdas",
+      "id": 31
+    },
+    {
+      "email": "agustin.escobar55@outlook.es",
+      "fullname": "asdasdasd asdasdasd",
+      "address": "asdadasdasd",
+      "cellphone": "1122515665",
+      "password": "asdasdasdasdasdasd",
+      "id": 32
     }
   ],
   "Roles": [
