@@ -8,11 +8,11 @@ import { HomeService } from '../services/home.service';
 })
 export class HomeComponent{
   name = 'Angular';
-  @ViewChild('bunnyVideo', { read: ElementRef }) bunnyVideo:any;
+  @ViewChild('bgVideo', { read: ElementRef }) bgVideo:any;
 
   ngAfterViewInit() {
 
-    const video: HTMLVideoElement = this.bunnyVideo.nativeElement;
+    const video: HTMLVideoElement = this.bgVideo.nativeElement;
 
    
 
@@ -23,32 +23,7 @@ export class HomeComponent{
       // uncomment this line to mute the video right before playing it
 
       video.muted = true;
-
-
-      try {
-        if (video.muted) {
-
-          console.log('playing muted video...');
-
-          // try to play the muted video
-          video.play().catch((err) => {
-           console.log('*** ERROR *** Cannot play the muted video (probably mobile browser) ' + err);
-          });
-        }
-        else {
-
-          console.log('play unmuted video...');
-
-          // try to play the muted video
-          video.play().catch((err) => {
-            console.log ('*** ERROR *** Cannot play the unmuted video (probably mobile browser) ' + err);
-          });
-        }
-
-      }
-      catch (err) {
-        console.log('SOME OTHER ERROR');
-      }
+      video.play();
 
     }, 100);
   }
